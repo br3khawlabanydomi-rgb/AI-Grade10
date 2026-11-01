@@ -1,0 +1,634 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grade 10 Week 3 — AI Solution Design &amp; Development - Designing a Solution</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f8fb;color:#183044;font:17px/1.55 Arial,sans-serif}header{background:linear-gradient(125deg,#123b5d,#1d7199);color:white;padding:24px clamp(18px,5vw,64px)}header h1{line-height:1.15;max-width:900px}.brand{display:flex;align-items:center;gap:13px}.brand img{width:48px;height:48px;object-fit:contain;background:white;border-radius:50%;padding:3px}.wrap{max-width:950px;margin:auto;padding:18px}nav,.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}button,.btn{border:0;border-radius:10px;padding:11px 16px;background:#123b5d;color:white;font-weight:bold;cursor:pointer;text-decoration:none}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #d39d20;outline-offset:2px}.secondary{background:#e2ecf2;color:#123b5d;border:1px solid #b8cbd7}.card{background:white;border:1px solid #dae4eb;border-radius:16px;padding:22px;margin:14px 0}.step{display:none}.step.active{display:block}.bar{height:9px;background:#d8e4eb;border-radius:9px;overflow:hidden}.bar span{display:block;height:100%;background:#bd9a4a;width:0}.source{white-space:pre-wrap;max-height:540px;overflow:auto;background:#f7fafb;padding:14px;border-radius:8px;font-size:15px}textarea{display:block;width:100%;min-height:86px;border:1px solid #9fb2bf;border-radius:9px;padding:12px;font:inherit}.feedback,.badge{display:none;background:#e8f5ec;border-left:5px solid #176d54;padding:12px;margin:10px 0}.frame{width:100%;height:640px;border:1px solid #9fb2bf;border-radius:10px}details summary{font-weight:bold;cursor:pointer}.small{font-size:.9rem;color:#526b7a}footer{text-align:center;color:#617889;padding:20px}@media(max-width:600px){body{font-size:16px}.card{padding:16px}.frame{height:500px}}</style></head><body><header><div class="brand"><img src="ics-logo.png" alt="International Community Schools logo"><strong>ICS · AI/CS · Khawla Banydomi</strong></div><h1>AI Solution Design &amp; Development - Designing a Solution</h1><p>Grade 10 · Main Course · Term 1 · Week 3 · Core + Lab, two 45-minute periods</p></header><main class="wrap"><nav aria-label="Lesson navigation"><button class="secondary" data-back>Back</button><span id="count"></span><button data-next>Next</button><button class="secondary" id="reset">Reset answers</button></nav><div class="bar" role="progressbar" aria-label="Lesson progress"><span id="progress"></span></div>
+<section class="step active card"><h2>Safeguarding and responsible use</h2><p>Do not enter names, faces, voices, Emirates ID numbers, or other personal or sensitive information into any tool. Follow your teacher’s instructions. Use the printed or teacher-operated option; no student account is needed.</p><button data-next>Start</button></section>
+<section class="step card"><h2>Starter</h2><div class="source">Hook / 6 min Pose one specific task and show a Watch and list the steps in • Which single step actually
+ board demo: supply a small non- order, and point to which changes the input into the output,
+ personal input, then run the teacher- step is the AI tool step. and how can you tell?
+ operated approved tool with a clear
+ instruction so it returns a sorted
+ summary. Ask the class to name the
+ ordered steps that turned the input into
+ that output.
+Model the design We-do: on the board design a three- Copy the step sequence and • If you removed the labelling step,
+/ 10 min step workflow for one specific task - for annotate the input and what would the final output be
+ example, clean a set of anonymised output of each step. missing and why?
+ notes, then label them by theme, then
+ sort them into a short summary. Think
+ aloud while naming each step, its input
+ and its output, and marking the AI tool
+ step. Draw the arrows that carry each
+ output into the next step.
+Guided build / 14 Hand out the workflow design sheet. In pairs, choose one specific • Where would your workflow break
+min Circulate as pairs design and build their task, write the ordered if the input arrived in a different
+ so</div><label for="starter">Write a prediction or question:</label><textarea id="starter"></textarea><button data-next>Continue</button></section>
+<section class="step card"><h2>Learning objectives and success criteria</h2><ul><li>Design a simple AI workflow - an ordered set of steps that turns an input into a useful output - for one specific task, using</li><li>Apply the workflow in a hands-on build and explain the reasoning behind the result, linking each step to the output it</li><li>Use the key vocabulary of AI solution design and development accurately - workflow, step, input, tool and output - to</li></ul><h3>I can…</h3><ul><li>I can design a simple AI workflow of ordered steps that turns an input into a useful output for one specific task.</li><li>I can build and run my workflow and explain the reasoning behind the result it gave.</li><li>I can use terms like workflow, step, input, tool and output correctly to explain how the parts of my solution connect.</li></ul><button data-next>Continue</button></section>
+<section class="step card"><h2>Explanation and examples</h2><div class="source">A simple AI solution is a workflow - an ordered sequence of steps that turns an input into a useful output for a specific task -
+not a single magic step. Each step has a defined input and output, and at least one step uses an AI tool such as a generator
+or a classifier. Designing at this level is systems thinking in miniature: decompose one specific task, decide what each step
+needs and produces, and reason about how the output of one step becomes the input of the next. Building is composing
+and configuring these steps so they connect reliably, not training a model from scratch. Explaining the result means tracing
+an output back to the step that produced it, and applying verify-before-trust - a confident output can still be wrong, so it is
+checked against the task and a trusted source.
+
+ Verify before you trust: judge the output against the task, then trace back to the step that produced it.</div><h3>Source activity</h3><div class="source">Hands-on activity guide
+Overview: Pairs design and build a simple three-step AI workflow that completes one specific task, then run it and explain
+the reasoning behind the result, using a card-based simulated AI so no accounts or personal data are needed.
+Grouping / timing: Pairs for the design and build, whole class for the debrief.
+Tool: A simulated-AI card deck of pre-generated, non-personal output cards prepared by the teacher stands in for the AI
+tool step - account-free, no personal data, and it works even with no devices. If a device is used it is the school-approved
+tool, teacher-operated on the board only.
+Facilitation steps:
+1. Choose one specific task from the task menu, for example turn ten anonymised event notes into a short sorted summary.
+2. Break the task into three ordered steps, and for each step write what its input is and what its output should be.
+3. Mark which step is the AI tool step, and place the tool card that matches the instruction for that step.
+4. Run the workflow step by step, feeding the output of each step in as the input of the next, and record the output at each stage.
+5. Judge the final output against the specific task and a trusted reference using verify-before-trust.
+6. Explain the reasoning behind the result - which step produced it - and note one step you would change to improve it.
+Unplugged fallback: The whole activity is already unplugged using paper cards. For a fully human version, one student
+acts as the AI tool step and follows the pair&#x27;s written instruction exactly, using only the supplied input, while the others
+check whether each step&#x27;s output completes the specific task.
+
+Formative assessment (aligned to the objectives)
+ Task / item Model response Marking note
+ Put four given workflow steps into the Clean the notes, label by theme, sort into Award full marks only if the order
+ correct order for one specific task and groups, write the summary; the AI tool step is is correct and the AI tool step is
+ mark the AI tool step. the labelling step, marked. identified; order and the marked
+ step both matter.
+ Explain the reasoning behind a given The labelling step missed that theme, so the Look for a named step and a clear
+ result: a workflow produced a summary sorting and summary steps never received it; cause-and-effect link to the later
+ that missed one theme. Name the step the fault is upstream, at the step that steps; reject &#x27;the tool was wrong&#x27;
+ that caused it and why. produces the labels the later steps depend with no step identified.
+ on.
+ Your workflow gives a confident but Check the earliest step whose output the Accept any answer that names a
+ wrong final output. State which step you wrong result depends on, then verify the final step to check and a verify-beforewould check first and how you would output against the specific task and a trusted trust step; reject &#x27;trust it because
+ verify it. source before trusting it. it reads well&#x27;.
+
+• Targets: Designs a simple AI workflow of ordered steps for a specific task and explains the reasoning behind the result
+(AIF·SD·G10·E).
+• Check: Pairs run their workflow, then complete a short exit check on step order, the AI tool step, and why the result came out
+as it did.
+• Success criteria: A correctly ordered simple workflow that completes the specific task, with each step&#x27;s input and output
+defined, the AI tool step identified, and the result explained by tracing it to a step.
+• Evidence: Completed workflow design sheets and exit tickets collected from every pair.
+• Feedback / adjustment: If step order or the reasoning is missing, re-model with a reorder-one-step demo next period; if
+secure, move pairs on to the combine-tools-and-data challenge.
+
+Differentiation
+ Criterion Emerging (expected) Approaching Not yet
+ Designs an ordered Designs a simple workflow of Lists the steps but the order Steps are missing, out of
+ workflow ordered steps for a specific task, or one step&#x27;s input and order, or the AI tool step
+ with each step&#x27;s input and output output is unclear is not identified
+ defined and the AI tool step marked
+ Explains the result Explains the reasoning behind the Describes the output but the Cannot say why the
+ result by tracing the output to the reasoning is partial output appeared
+ step that produced it
+ Uses key vocabulary Uses workflow, step, input, tool and Uses one or two terms Terms are missing or
+ output accurately correctly muddled
+
+Representation: Provide the workflow design sheet both as a labelled step ladder and as sentence stems such as &#x27;Step 1 takes ...
+and produces ...&#x27;, and leave a worked three-step example on the desk for reference.
+Action &amp; expression: Let pairs present their workflow as a drawn step ladder, a spoken walk-through, or physically arranged step
+cards - whichever lets them design, build and explain it.
+People of Determination: Pre-cut and colour-code the step cards, reduce the task menu to two clear options, provide a partly
+completed instruction for the AI tool step to adapt, pai</div><button data-next>Try the practice</button></section>
+<section class="step card"><h2>Interactive practice</h2><p>Design a simple AI workflow - an ordered set of steps that turns an input into a useful output - for one specific task, using</p><label for="practice">Explain your answer with an example and reason:</label><textarea id="practice"></textarea><div class="row"><button id="check">Check my response</button><button class="secondary" id="modelbtn">Show source guidance</button></div><div id="feedback" class="feedback" role="status" aria-live="polite"></div><details id="model" hidden><summary>Teacher Pack model guidance</summary><div class="source">Use the teacher pack answer key after completing your own response.</div></details><button data-next>Continue</button></section>
+<section class="step card"><h2>Week 3 - Core - Worksheet | AI Solution Design &amp; Development - Designing a</h2><p>The original worksheet pages are preserved in order and embedded below. Download the PDF to print or complete it on paper.</p><a class="btn secondary" download href="ICS_AI-CS_G10_T1_W03_Worksheet.pdf">Download original worksheet PDF</a><iframe class="frame" title="Original worksheet pages" src="ICS_AI-CS_G10_T1_W03_Worksheet.pdf"></iframe><details><summary>Text extracted from the original worksheet pages</summary><div class="source">Week 3 - Core - Worksheet | AI Solution Design &amp; Development - Designing a
+Solution
+
+Strand Self-Check
+
+• Rate yourself against this week&#x27;s success criteria: Can do / Partially / Not yet.
+What would you practise to move up a level?
+
+Can do ▢ Partially ▢ Not yet ▢ To practise:
+________________________________________
+Name: __________________________ Class: ______________ Date: ______________
+Scenario: the clinic appointment helper - typed symptoms in, a suggested appointment type and a plain-language summary out.
+
+1. Write, in one line, what a finished result of your chosen task should look like.
+__________________________________________________________________
+__________________________________________________________________
+
+2. Design the workflow: for each step write its input and output, and mark the AI tool step.
+ Step Input Output AI tool step?
+
+ 1
+
+ 2
+
+ 3
+
+3. What does your prepare step check or remove before the AI step (including any personal data)?
+__________________________________________________________________
+__________________________________________________________________
+
+4. Run it, then explain the result by tracing the final output back to the step that produced it.
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the step that mattered most in completing my task was... because...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 3 - Lab - Worksheet | AI Solution Design &amp; Development - Build, Test,
+Improve
+Name: __________________________ Class: ______________ Date: ______________
+Scenario: the clinic appointment helper - make it reliable across more than one input, and combine a second tool and data source.
+
+1. Run your Core workflow on a fresh input. Judge the output against your task. What is the weakest step?
+__________________________________________________________________
+__________________________________________________________________
+
+2. Change only that one step. Record the result before and after, and the downstream output that
+changed.
+ Step changed Before After
+
+3. Add a second tool step and a second data source. What does each add?
+__________________________________________________________________
+__________________________________________________________________
+
+4. Run the whole solution on two different inputs. Did it complete the task both times? Verify each output.
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the step or data source I changed that improved my solution most was... and I know
+because...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 4 - Core - Worksheet | Critical Evaluation &amp; Informed Interaction - Judging &amp;
+Improving Outputs
+
+Strand Self-Check
+
+• Rate yourself against this week&#x27;s success criteria: Can do / Partially / Not yet.
+What would you practise to move up a level?
+
+Can do ▢ Partially ▢ Not yet ▢ To practise:
+________________________________________
+Name: __________________________ Class: ______________ Date: ______________
+Scenario: three AI translations of the same visitor notice - judge them against accuracy, fairness and usefulness, with evidence.
+
+1. For one output, name a strength and a weakness against each criterion, with the exact evidence.
+ Criterion Strength (+ evidence) Weakness (+ evidence)
+ Accuracy
+
+ Fairness
+
+ Usefulness
+
+2. Trace the deciding weakness to a component. Was it the data, the prompt, or the tool? How do you
+know?
+__________________________________________________________________
+__________________________________________________________________
+
+3. Explainability: could this system tell an affected person how it produced the translation? What could it
+show, and what stays hidden?
+__________________________________________________________________
+__________________________________________________________________
+
+4. Think about it: could an output be perfectly accurate and still have a serious weakness? Give an
+example.
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the strength I almost missed was... , and the weakness that surprised me was...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 4 - Lab - Worksheet | Critical Evaluation &amp; Informed Interaction - The
+Evaluation Clinic
+Name: __________________________ Class: ______________ Date: ______________
+Scenario: a messier batch of translations - rank them, test the front-runner across inputs, and fix the weakest component.
+
+1. Rank the outputs best to worst. Write the deciding evidence and any tie-breaker beside each.
+ Rank Output Deciding evidence / tie-breaker
+
+ 1
+
+ 2
+
+ 3
+
+2. Test the top output on a harder notice. Did it stay accurate? Note any false positive or false negative.
+__________________________________________________________________
+__________________________________________________________________
+
+3. Take the weakest output. Trace the deciding weakness to a component (data / prompt / tool) and
+propose one fix.
+__________________________________________________________________
+__________________________________________________________________
+
+4. Think about it: could fixing the prompt turn a fairness weakness into a strength, or would you need
+better data? How would you test it?
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: my ranking changed when I noticed... , which taught me...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 5 - Core - Worksheet | Governance &amp; Ethics - Locate the Risk in the System
+
+Strand Self-Check
+
+• Rate yourself against this week&#x27;s success criteria: Can do / Partially / Not yet.
+What would you practise to move up a level?
+
+Can do ▢ Partially ▢ Not yet ▢ To practise:
+________________________________________
+Name: __________________________ Class: ______________ Date: ______________
+Scenario: the school admissions shortlister scores applicants and produces a ranked list that staff act on: application data → scoring
+model → ranked list.
+
+1. Find three concerns in the shortlister. For each, name its type, the component it comes from, the stage
+(1-6, if it is a bias), and a responsible measure.
+ Concern Type (bias / privacy / Component (data / Stage (1-6) Responsible measure
+ misuse) model / prompt)
+
+2. Choose one privacy concern above. Name one technical mechanism (data minimisation,
+anonymisation / pseudonymisation, or access control) that would protect people, and say why.
+__________________________________________________________________
+__________________________________________________________________
+
+3. Think about it: an integrated service quietly reuses data given for one task to do a different task. Is that a
+privacy concern, a misuse concern, or both? How would your measure differ for each?
+__________________________________________________________________
+__________________________________________________________________
+__________________________________________________________________
+
+4. My reflection: the ethical concern I judge most serious in the shortlister is...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 5 - Lab - Worksheet | Governance &amp; Ethics - Measure the Risk and Govern It
+Name: __________________________ Class: ______________ Date: ______________
+Scenario: the admissions shortlister has been tested on applicants whose true strength is known. Use the results below to measure
+fairness and plan a responsible deployment.
+
+1. Measure fairness. Enter the counts from the results pack; the false-negative rate and parity gap fill in
+automatically. (Rate = wrongly rejected / strong tested.)
+ Group Strong applicants tested Wrongly rejected (false False-negative rate
+
+ negatives)
+ Group A
+
+ Group B
+
+2. What does the gap mean for real applicants? Which group is the system less fair to, and which pipeline
+stage is the most likely source?
+__________________________________________________________________
+__________________________________________________________________
+
+3. Propose a stage-targeted mitigation for the biggest concern - name the stage it changes and what you
+would do.
+__________________________________________________________________
+__________________________________________________________________
+
+4. Write a deployment plan . Complete each step and name the accountable role.
+Pilot
+what runs alongside humans __________________________
+accountable role ____________________________________
+Monitor
+what you track over time ____________________________
+accountable role ____________________________________
+Incident response
+what triggers a pause _______________________________
+accountable role ____________________________________
+Redress
+how a person appeals ________________________________
+accountable role ____________________________________
+
+5. My reflection: the mitigation I would build in first is... , the person accountable for what remains is... ,
+and I know the fix worked because the parity gap changed from ... to ...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 6 - Core - Worksheet | Integrated · all four strands - Bringing the Strands
+Together
+
+Strand Self-Check
+
+• Rate yourself against this week&#x27;s success criteria: Can do / Partially / Not yet.
+What would you practise to move up a level?
+
+Can do ▢ Partially ▢ Not yet ▢ To practise:
+________________________________________
+
+Name: __________________________ Class: ______________ Date: ______________
+Scenario: the Ne&#x27;ma-inspired food-surplus matcher - classify, match, draft - measured with a metric you define and compute.
+
+1. Run ten item cards through Classify → Match → Draft. Tick each stage that matched the true key.
+ Item Classify ok? Match ok? Draft ok?
+ 1
+
+ 2
+
+ 3
+
+ 4
+
+ 5
+
+2. Compute your metric. Match accuracy = matches passing the rule sheet ÷ matches proposed, as a
+percentage.
+ Matches passing Matches proposed Accuracy (%)
+
+ Before the constraint
+
+ After adding the constraint
+
+__________________________________________________________________
+__________________________________________________________________
+
+3. Where did an early error propagate? Name the tool or interface that caused most misses.
+__________________________________________________________________
+__________________________________________________________________
+
+4. Name one responsible-use choice you made (for example, a human gate or using no personal data).
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the tool or interface I trust most, and the one I would improve first, is... because...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 6 - Lab - Worksheet | Integrated · all four strands - Run It End-to-End
+Name: __________________________ Class: ______________ Date: ______________
+Scenario: inspect the surplus-item data, run the matcher end-to-end, measure accuracy, and adapt.
+
+1. Inspect the dataset. Record one missing value, one wrong label, and whether the set is representative.
+__________________________________________________________________
+__________________________________________________________________
+
+2. Run the full set and total your accuracy (items right at every stage) out of the total.
+ Right at every stage Total items Accuracy (%)
+
+ Before the change
+
+ After the change
+
+3. Name the tool or interface that failed most, and where an early error propagated.
+__________________________________________________________________
+__________________________________________________________________
+
+4. Add one constraint (a second criterion or a risk rule). What did it change?
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the tool or interface that let my pipeline down most, and the change that helped, was...
+because...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 7 - Core - Worksheet | Signature Solution · Planning - Architect Your
+Signature Solution
+
+Strand Self-Check
+
+• Rate yourself against this week&#x27;s success criteria: Can do / Partially / Not yet.
+What would you practise to move up a level?
+
+Can do ▢ Partially ▢ Not yet ▢ To practise:
+________________________________________
+Name: __________________________ Class: ______________ Date: ______________
+Your brief: choose an authentic, non-personal problem and stakeholder, then architect an integrated solution for it.
+
+1. Write your goal in one sentence: what defined problem will your integrated solution solve, and for
+whom?
+__________________________________________________________________
+__________________________________________________________________
+
+2. List your components and draw the ordered structure (each tool&#x27;s output feeds the next).
+ Data (non-personal) Tool 1 Tool 2 Prompt for each
+
+3. Data preparation: what is the data, how is it prepared and de-identified, and what does it exclude?
+__________________________________________________________________
+__________________________________________________________________
+
+4. Set success criteria (a number), then name one risk, its mitigation, and the check step that catches it.
+__________________________________________________________________
+__________________________________________________________________
+
+5. Start your system card: purpose, inputs, data &amp; preparation, limitations, and who is accountable.
+
+__________________________________________________________________
+__________________________________________________________________
+__________________________________________________________________
+
+Week 7 - Lab - Worksheet | Signature Solution · Planning - Prototype and
+Pressure-Test
+Name: __________________________ Class: ______________ Date: ______________
+Your brief: prototype your integrated solution by hand, then pressure-test it and design a fallback.
+
+1. Walk one input through every tool. At each hand -off, note the output passed on and whether it is usable.
+__________________________________________________________________
+__________________________________________________________________
+__________________________________________________________________
+
+2. At each check step, did the output meet your success criteria? Where did it pass or fail?
+__________________________________________________________________
+__________________________________________________________________
+
+3. Weaken one component on purpose. Trace how far the failure spread before a check caught it.
+ Component weakened Tools affected before a check caught it
+
+4. Design a fallback path: the check that triggers it, the safer reroute, and who is accountable.
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the hand-off that held up best was... and the fix or fallback I added after pressure-testing
+was...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 8 - Core - Worksheet | Signature Solution - Build, Evaluate, Improve
+
+Strand Self-Check
+
+• Rate yourself against this week&#x27;s success criteria: Can do / Partially / Not yet.
+What would you practise to move up a level?
+
+Can do ▢ Partially ▢ Not yet ▢ To practise:
+________________________________________
+Name: __________________________ Class: ______________ Date: ______________
+Your brief: assemble your solution, evaluate it, and set aside a held-out test set for the final check.
+
+1. List the inputs you will build and tune on, and the few you will hold out (do not tune on these).
+
+ Development inputs (build &amp; tune) Held-out inputs (test only at the end)
+
+2. Assemble and run. Record the integrated output, then mark it against each success criterion and
+governance rule.
+__________________________________________________________________
+__________________________________________________________________
+__________________________________________________________________
+
+3. Verify one claim in the output against a trusted source. What did you check, and against what?
+__________________________________________________________________
+__________________________________________________________________
+
+4. Change one component to fix a missed criterion. Which one, and did the new output meet it?
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the one component I improved today was... because...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 8 - Lab - Worksheet | Signature Solution - Finish It, Then Prove It
+Name: __________________________ Class: ______________ Date: ______________
+Your brief: finish the system, test it several times including an edge case and a held-out input, and keep an evaluation log.
+
+1. Keep an evaluation log. Add a row for each test.
+ Input (type) Output Criteria &amp; rules met? Component changed
+
+2. Describe one edge case that broke a component, and how you made the system respond gracefully.
+__________________________________________________________________
+__________________________________________________________________
+
+3. Run a held-out input the system was not tuned on. Did it still meet the criteria?
+__________________________________________________________________
+__________________________________________________________________
+
+4. Across your logged tests, which improvement do you trust most, and what is your evidence?
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: across my logged tests, the component improvement I trust most is... because...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 9 - Core - Worksheet | Signature Solution - Refining &amp; Finishing the System
+
+Strand Self-Check
+
+• Rate yourself against this week&#x27;s success criteria: Can do / Partially / Not yet.
+What would you practise to move up a level?
+
+Can do ▢ Partially ▢ Not yet ▢ To practise:
+________________________________________
+Name: __________________________ Class: ______________ Date: ______________
+Your brief: make one traced change, re-run the chain, and measure the improvement on your held-out set.
+
+1. Pick ONE component to change. Predict which hand-off will carry the effect.
+__________________________________________________________________
+__________________________________________________________________
+
+2. Measure before and after on the held-out set. Accuracy = correct ÷ total.
+ Correct Total Accuracy (%)
+
+ Before
+
+ After
+
+__________________________________________________________________
+__________________________________________________________________
+
+3. Did the effect propagate through the hand-off you predicted? What happened downstream?
+__________________________________________________________________
+__________________________________________________________________
+
+4. Risk check: who could be affected, how would you catch a mistake, and which governance rule applies?
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the one change that most improved my system was... , it propagated through... to... , and I
+know it helped because...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 9 - Lab - Worksheet | Signature Solution - Lock It and Rehearse the Demo
+Name: __________________________ Class: ______________ Date: ______________
+Your brief: lock a reproducible version and rehearse a defendable demo.
+
+1. Run one final iteration. Confirm every component still meets the criteria, then version-lock. What did
+you lock?
+__________________________________________________________________
+__________________________________________________________________
+
+2. Write your demo spine: task, input, tool chain, output, and one line on a hand-off.
+__________________________________________________________________
+__________________________________________________________________
+__________________________________________________________________
+
+3. Name your two checks: one performance check and one governance/risk check.
+ Performance check Governance / risk check
+
+4. Prepare for a hard question: if asked how you know it is not misleading anyone, which check do you
+point to?
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: I can show my system is trustworthy because... , low-risk and governance-aligned
+because... , and under a hard question I can point to...
+__________________________________________________________________
+__________________________________________________________________
+
+Week 10 - Core - Worksheet | Showcase, Assessment &amp; Reflection - Showcase &amp;
+Reflection
+Name: __________________________ Class: ______________ Date: ______________
+Your brief: present and justify your solution, govern it on a six-part canvas, and set a Term-2 goal.
+
+1. Justify two choices. For each, give the choice, its strand, the reason, and the trade-off.
+ Choice Strand Reason Trade-off
+
+2. Complete your governance canvas (fill each of the six parts).
+ Purpose &amp; benefit Risks &amp; affected groups Mitigations &amp; owners
+ Data &amp; privacy Human oversight Monitoring &amp; review
+
+3. Decision brief: do you recommend deploy, scale, or pause - and why?
+__________________________________________________________________
+__________________________________________________________________
+
+4. Four-strand task: write one short, justified item from each strand.
+__________________________________________________________________
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the strongest choice I can justify, its strand and its trade-off, is... My Term-2 goal is...
+__________________________________________________________________
+
+__________________________________________________________________
+
+Week 10 - Lab - Worksheet | Showcase, Assessment &amp; Reflection - Peer Review &amp;
+Aim Higher
+Name: __________________________ Class: ______________ Date: ______________
+Your brief: review others by strand, act on the best feedback, and set a prioritised Term-2 goal.
+
+1. Review three solutions. For each, write one evidenced strength and one actionable improvement, tied
+to a strand.
+ Solution Strand Strength (evidence) Improvement (actionable)
+
+2. Make the highest-value fix from your own feedback. What did you change?
+__________________________________________________________________
+__________________________________________________________________
+
+3. What did that fix ripple into - for better or worse - elsewhere in your system?
+__________________________________________________________________
+__________________________________________________________________
+
+4. Write one prioritised Term-2 goal, the strand it targets, and a first step you can start on.
+__________________________________________________________________
+__________________________________________________________________
+
+5. My reflection: the one Term-2 goal I am setting, the strand it targets, and my first step, is...
+__________________________________________________________________
+__________________________________________________________________</div></details><label for="worksheet">Worksheet response notes (optional):</label><textarea id="worksheet"></textarea><button data-next>Continue to the separate post-assessment</button></section>
+<section class="step card"><h2>Separate post-assessment</h2><p>Answer independently in your own words. These prompts align to today’s objectives and are not automatically graded.</p><label for="post0">Design a simple AI workflow - an ordered set of steps that turns an input into a useful output - for one specific task, using</label><textarea id="post0"></textarea><label for="post1">Apply the workflow in a hands-on build and explain the reasoning behind the result, linking each step to the output it</label><textarea id="post1"></textarea><label for="post2">Use the key vocabulary of AI solution design and development accurately - workflow, step, input, tool and output - to</label><textarea id="post2"></textarea><p class="small">Responses stay in this browser page unless you download them. Nothing is sent to your teacher.</p><button data-next>Finish</button></section>
+<section class="step card"><h2>Exit ticket and reflection</h2><div class="source">Check and close Exit check: each pair states their State their steps in order, • If a classmate rebuilt your
+/ 6 min ordered steps, names the AI tool step, name the AI tool step, and workflow from your steps, would
+ and gives one reason their result came explain the reasoning behind they complete the same task?
+ out as it did. Collect the design sheets their result. What would they need to know?
+ as evidence.
+
+Anticipated misconceptions
+ Misconception How to address it
+ The AI tool does the whole task, so the other steps hardly Show a run where the input is messy and the instruction is vague
+ matter. and the tool returns something useless; establish that a workflow
+ is only as good as the steps that prepare the input and direct the
+ tool - the surrounding steps are what make the solution work.
+ A confident, well-written output must have completed the Run one fluent but wrong output, then practise verify-before-trust:
+ task correctly. judge the output against the specific task and a trusted source,
+ not against how polished it sounds, and trace the fault back to a
+ step.
+ The order of the steps does not matter as long as they are Reorder two steps on the board - label before clean -</div><label for="exit">One thing I learned / one question I still have:</label><textarea id="exit"></textarea><div class="row"><button id="finish">Mark complete on this device</button><button class="secondary" id="download">Download my typed responses</button></div><div id="badge" class="badge" role="status">Lesson complete on this device. This is not a teacher submission or saved school record.</div></section><footer>ICS AI/CS · Grade 10 · Term 1 · Week 3</footer></main><script>let step=0;const steps=[...document.querySelectorAll(".step")];function go(n){step=Math.max(0,Math.min(n,steps.length-1));steps.forEach((x,i)=>x.classList.toggle("active",i===step));document.getElementById("progress").style.width=((step+1)/steps.length*100)+"%";document.getElementById("count").textContent="Section "+(step+1)+" of "+steps.length;window.scrollTo({top:0,behavior:"smooth"})}document.querySelectorAll("[data-next]").forEach(b=>b.onclick=()=>go(step+1));document.querySelectorAll("[data-back]").forEach(b=>b.onclick=()=>go(step-1));document.getElementById("check").onclick=()=>{let v=document.getElementById("practice").value.trim(),f=document.getElementById("feedback");f.style.display="block";f.textContent=v.length<12?"Add a complete idea and a reason, then try again.":"Good start. Check that you used a lesson term, gave an example, and explained why it fits. This is guidance, not a saved or graded result."};document.getElementById("modelbtn").onclick=()=>document.getElementById("model").hidden=!document.getElementById("model").hidden;document.getElementById("download").onclick=()=>{let s=[...document.querySelectorAll("textarea")].map((x,i)=>"Response "+(i+1)+":\n"+x.value).join("\n\n");let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([document.title+"\n\n"+s],{type:"text/plain"}));a.download="AI-CS-Lesson-Responses.txt";a.click();URL.revokeObjectURL(a.href)};document.getElementById("reset").onclick=()=>{document.querySelectorAll("textarea").forEach(x=>x.value="");document.getElementById("badge").style.display="none";go(0)};document.getElementById("finish").onclick=()=>{document.getElementById("badge").style.display="block"};go(0);</script></body></html>
